@@ -1,0 +1,7 @@
+<h2>Feedback Submitted Successfully</h2>
+<p>Here are all feedbacks:</p>
+<ul>
+    {% for Feedback in feedbacks %}
+        <li>{{ Feedback.uname }} - {{ Feedback.email }}: {{ Feedback.msg }}</li>
+    {% endfor %}
+</ul>

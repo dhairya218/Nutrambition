@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Gym Template" />
+    <meta name="keywords" content="Gym, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="{% static '/img/logo.png' %}" />
+
+    <title>Nutrambition</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static  '/css/feedback.css' %}" />
+
+    <body>
+        <body> 
+            <h3>Feedback Form
+            </h3> 
+            <div class="form-box"> 
+                <div class="textup"> 
+                    <i class="fa fa-solid fa-clock"></i> 
+                    It only takes two minutes!! 
+                </div> 
+                <form method="POST"> 
+                    {% csrf_token %}
+                    <!-- <label for="uname"> 
+                        <i class="fa fa-solid fa-user"></i> 
+                        Name 
+                    </label> 
+                    <input type="text" id="uname" 
+                           name="uname" required> 
+          
+                    <label for="email"> 
+                        <i class="fa fa-solid fa-envelope"></i> 
+                        Email Address 
+                    </label> 
+                    <input type="email" id="email" 
+                           name="email" required> 
+          
+                    <label for="phone"> 
+                        <i class="fa-solid fa-phone"></i> 
+                        Phone No 
+                    </label> 
+                    <input type="tel" id="phone" 
+                           name="phone" required> 
+          
+                    <label> 
+                        <i class="fa-solid fa-face-smile"></i> 
+                        Do you satisfy with our service? 
+                    </label> 
+                    <div class="radio-group"> 
+                        <input type="radio" id="yes" 
+                               name="satisfy" value="yes" checked> 
+                        <label for="yes">Yes</label> 
+          
+                        <input type="radio" id="no" 
+                               name="satisfy" value="no"> 
+                        <label for="no">No</label> 
+                    </div> 
+          
+                    <label for="msg"> 
+                        <i class="fa-solid fa-comments" 
+                           style="margin-right: 3px;"></i> 
+                        Write your Suggestions: 
+                    </label> 
+                    <textarea id="msg" name="msg" 
+                              rows="4" cols="10" required> 
+                    </textarea> 
+                    <button type="submit"> 
+                        Submit 
+                    </button>  -->
+                    {{form.as_p}}
+                    <button type="submit"> 
+                        Submit 
+                    </button>
+                    <li><a href="{% url 'feedback_success' %}">feedbacks</a></li>
+                </form> 
+            </div> 
+        </body> 
+
+
+  
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.barfiller.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

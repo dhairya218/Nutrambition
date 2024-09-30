@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static '/img/logo.png' %}">
+    <title>User Detail</title>
+    <style>
+        * {font-family: sans-serif;}
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background: url("{% static '/images/bg_login_signup.png' %}"); /*Any Image or color*/
+            color: white;
+            padding: 10px;
+            background-position: center;
+        }
+
+        #container {
+            background-color: rgb(39 39 39 / 50%);
+            max-width: 600px;
+            min-width: 300px;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            padding: 2px 10px 0px 0px;
+
+        }
+
+
+        h1,
+        p {
+            margin: 1em auto;
+            text-align: center;
+        }
+
+        #description {
+            padding: 0 15px 0 15px;
+        }
+
+        p {
+            padding-bottom: 1rem;
+            max-width: 500px;
+        }
+
+        form {
+            width: 70vw;
+            max-width: 500px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding-bottom: 3em;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            display: block;
+            margin: 0.35rem 0 0 0;
+            padding: 4px 0 0 0;
+        }
+        textarea,
+        select,
+        .name,
+        .email,
+        .age {
+            margin: 10px 0 0 0;
+            width: 100%;
+            min-height: 2em;
+        }
+
+        input,
+        textarea {
+            background-color: #00000003;
+            /* border: 1px solid #0e0729; */
+            color: white;
+        }
+
+        .inline {
+            width: unset;
+            margin: 0 0.5em 0 0;
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 65%;
+            margin: 1em auto;
+            height: 2em;
+            font-size: 1.3rem;
+        background: rgb(218 51 3);
+            border-color: rgb(218 51 3);
+            min-width: 300px;
+        }
+
+        #disclaimer {
+            font-size: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title">Basic Information</h1>
+
+        <form method="post" id="survey-form">
+
+            <fieldset>
+                <label for="age" id="number-label">What is your Age?</label>
+                <input type="number" class="age" id="age" name="age" min="18" max="150" placeholder="Age in Human Years"
+                required />
+            </fieldset>
+            <fieldset>
+                <label for="mob_no" id="number-label">Enter Mobile Number</label>
+                <input type="number" class="age" id="mob_no" name="mob_no" placeholder="000 000 000 0"
+                required />
+            </fieldset>
+            <fieldset>
+                    <label for="position">What is your biological sex?
+                    </label>
+                    <label for="male">
+                        <input type="radio" value="male" id="male" name="gender" class="inline">Male</label>
+                    <label for="female">
+                        <input type="radio" value="female" id="female" name="gender" class="inline">Female</label>
+                    <label for="mid-lane">
+            </fieldset>
+
+            <fieldset>
+                <label for="height" id="number-label">How tell are you?</label>
+                <input type="number" class="age" id="height" name="height" placeholder="Height in Cm"
+                required />
+            </fieldset>
+            <fieldset>
+                <label for="weight" id="number-label">What is your current weight?</label>
+                <input type="number" class="age" id="weight" name="weight" placeholder="Weight"
+                required />
+            </fieldset>
+            <fieldset>
+                <label for="t_weight" id="number-label">What is your target weight?</label>
+                <input type="number" class="age" id="t_weight" name="t_weight" placeholder="Target Weight"
+                required />
+            </fieldset>
+            <fieldset>
+                <label for="dropdown">Any Medical Condition we should be aware of?</label>
+                <select id="dropdown" name="medical_condition">
+                    <option value="">(select one)</option>
+                    <option value="Diabetes">Diabetes</option>
+                    <option value="Pre-Diabetes">Pre-Diabetes</option>
+                    <option value="Cholestrol">Cholestrol</option>
+                    <option value="Hypertension">Hypertension</option>
+                    <option value="Thyroid">Thyroid</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label for="routine">How active are you?</label>
+                <select id="dropdown" name="activity">
+                    <option value="">(select one)</option>
+                    <option value="Little or No Activity">Little or No Activity</option>
+                    <option value="Lightly Active">Lightly Active</option>
+                    <option value="Moderately Active">Moderately Active</option>
+                    <option value="Very Active">Very Active</option>
+                </select>
+            </fieldset>
+
+            <input type="submit" id="submit" value="Submit">
+    </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+from django.urls import path
+from nutra import views
+
+urlpatterns = [
+   path('', views.home , name="home"),
+   path('signin', views.signin , name="login"),
+   path('signup', views.signup , name="signup" ),
+   path('log', views.logout_request, name='logout'),
+   path('userdetail', views.userdetail , name="userdetail" ),
+   path('about', views.about, name="about" ),
+   path('feedback', views.feedback, name="feedback" ),
+   path('booking', views.booking, name="booking" ),
+   path('success', views.feedback_success_view, name='feedback_success'),
+   path('explore1', views.explore1, name="explore1" ),
+   path('explore2', views.explore2, name="explore2" ),
+   path('contact', views.contact, name="contact" ),
+   path('classes', views.classes, name="classes" ),
+   path('services', views.services, name="services" ),
+   path('class_timetable', views.class_timetable, name="class_timetable" ),
+   path('calculator', views.calculator, name="calculator" ),
+   path('bmr', views.bmr, name="bmr" ),
+   path('calorie', views.calorie, name="calorie" ),
+   path('bmi', views.bmi, name="bmi" ),
+   path('excercise', views.excercise, name="excercise" ),
+   path('excercise-deatil', views.excercise_deatil, name="excercise-deatil" ),
+   path('excercise-deatil/<str:param>', views.excercise_deatil, name="excercise-deatil-with_id" ),
+   path('favoviretes', views.favoviretes, name="favoviretes" ),
+   path('teams', views.team, name="teams" ),
+   path('gallery', views.gallery, name="gallery" ),
+   path('blog', views.blog, name="blog" ),
+   path('blogdetails', views.blogdetails, name="blogdetails" ),
+]
